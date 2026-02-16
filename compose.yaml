@@ -1,0 +1,58 @@
+services:
+  db-origem:
+    container_name: 'db-origem'
+    image: postgres:16.0-alpine3.18
+    ports:
+      - '5432:5432'
+    env_file:
+      - .env
+    environment:
+      POSTGRES_USER: ${POSTGRES_ORIGEM_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_ORIGEM_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_ORIGEM_DB}
+    volumes:
+      - postgres_origem:/var/lib/postgresql/data
+    networks:
+      dbs:
+
+
+  db-destino:
+    container_name: 'db-destino'
+    image: postgres:16.0-alpine3.18
+    ports:
+      - '5433:5432'
+    env_file:
+      - .env
+    environment:
+      POSTGRES_USER: ${POSTGRES_DESTINO_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_DESTINO_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DESTINO_DB}
+    volumes:
+      - postgres_destino:/var/lib/postgresql/data
+    networks:
+      dbs:
+
+  db-controle:
+    container_name: 'db-controle'
+    image: postgres:16.0-alpine3.18
+    ports:
+      - '5434:5432'
+    env_file:
+      - .env
+    environment:
+      POSTGRES_USER: ${POSTGRES_CONTROLE_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_CONTROLE_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_CONTROLE_DB}
+    volumes:
+      - postgres_controle:/var/lib/postgresql/data
+    networks:
+      dbs:
+
+
+volumes:
+  postgres_origem:
+  postgres_destino:
+  postgres_controle:
+
+networks:
+  dbs:
