@@ -1,0 +1,49 @@
+.botao_de_acao {
+    -fx-text-fill: white; /* Cor do texto */
+    -fx-font-size: 14px; /* Tamanho da fonte */
+    -fx-padding: 10px 20px; /* Espaçamento interno */
+    -fx-border-radius: 5px; /* Bordas arredondadas */
+    -fx-background-radius: 10px; /* Bordas arredondadas para o fundo */
+    -fx-font-family: "Arial", sans-serif; /* Fonte */
+}
+
+
+
+#botao_add {
+    -fx-background-color: #2196F3; /* Azul */
+}
+#botao_add:hover {
+    -fx-background-color: #0b7dda; /* Azul mais escuro ao passar o mouse */
+}
+
+
+#botao_save {
+    -fx-background-color: #4CAF50; /* Verde */
+}
+#botao_save:hover {
+    -fx-background-color: #45a049; /* Verde mais escuro ao passar o mouse */
+}
+
+
+#botao_search {
+    -fx-background-color: #FFC107
+}
+#botao_search:hover {
+    -fx-background-color: #ffb300; /* Amarelo mais escuro ao passar o mouse */
+}
+
+
+#botao_delete {
+    -fx-background-color: #f44336; /* Vermelho */
+}
+#botao_delete:hover {
+    -fx-background-color: #da190b; /* Vermelho mais escuro ao passar o mouse */
+}
+
+
+.botao_clear {
+    -fx-background-color: gray; /* Cinza */
+}
+.botao_clear:hover {
+    -fx-background-color: #a9a9a9; /* Cinza mais claro ao passar o mouse */
+}
