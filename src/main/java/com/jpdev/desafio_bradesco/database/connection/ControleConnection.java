@@ -7,7 +7,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Properties;
 
-public class ControlConnection implements DbConnection{
+public class ControleConnection implements DbConnection{
     @Override
     public Connection getConnection() throws SQLException {
         Properties env = EnvLoader.load();
