@@ -8,7 +8,7 @@ import javafx.stage.Stage;
 public class TelaReplicadorDirecao extends Application {
     @Override
     public void start(Stage stage) throws Exception {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/TelaReplicadorDirecaoView.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/tela-replicador/TelaReplicadorDirecaoView.fxml"));
 
         Scene scene = new Scene(loader.load());
         stage.setTitle("Replicação - Direção");

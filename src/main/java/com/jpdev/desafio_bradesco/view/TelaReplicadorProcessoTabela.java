@@ -8,7 +8,7 @@ import javafx.stage.Stage;
 public class TelaReplicadorProcessoTabela extends Application {
     @Override
     public void start(Stage stage) throws Exception {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/TelaReplicadorProcessoTabelaView.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/tela-replicador/TelaReplicadorProcessoTabelaView.fxml"));
 
         Scene scene = new Scene(loader.load());
         stage.setTitle("Replicação - Processo e Tabela");
