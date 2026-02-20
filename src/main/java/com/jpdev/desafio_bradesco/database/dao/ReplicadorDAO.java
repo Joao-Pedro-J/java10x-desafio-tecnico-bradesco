@@ -13,6 +13,6 @@ public interface ReplicadorDAO<T> {
 
     void update(Long id, T tb) throws SQLException;
 
-    void delete(Long id) throws SQLException;
+    boolean delete(Long id) throws SQLException;
 
 }

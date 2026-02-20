@@ -80,10 +80,11 @@ public class ReplicadorProcessoDAO implements ReplicadorDAO<TB_REPLICACAO_PROCES
         pstUpdate.executeUpdate();
     }
 
-    public void delete(Long id) throws SQLException {
+    public boolean delete(Long id) throws SQLException {
         pstDelete.setLong(1, id);
 
-        pstDelete.executeUpdate();
+        // O método executeUpdate retorna 1 se a linha foi deletada, ou 0 se nenhuma linha foi afetada (ex: ID não encontrado)
+        return pstDelete.executeUpdate() == 1;
     }
 
     private TB_REPLICACAO_PROCESSO map(ResultSet rs) throws SQLException{
