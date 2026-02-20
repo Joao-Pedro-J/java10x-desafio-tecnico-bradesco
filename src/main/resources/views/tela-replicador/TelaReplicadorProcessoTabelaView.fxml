@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane maxHeight="520.0" maxWidth="820.0" minHeight="520.0" minWidth="820.0" prefHeight="520.0" prefWidth="820.0" stylesheets="@../styles/TelaReplicadorProcessoTabelaStyle.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="520.0" maxWidth="820.0" minHeight="520.0" minWidth="820.0" prefHeight="520.0" prefWidth="820.0" stylesheets="@../../styles/TelaReplicadorGlobalStyle.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <HBox layoutY="10.0" maxHeight="40.0" maxWidth="820.0" minHeight="40.0" minWidth="820.0" prefHeight="40.0" prefWidth="820.0">
          <children>
@@ -26,7 +26,7 @@
                <graphic>
                   <ImageView fitHeight="32.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../icons/add.png" />
+                        <Image url="@../../icons/add.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -39,7 +39,7 @@
                <graphic>
                   <ImageView fitHeight="32.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../icons/save.png" />
+                        <Image url="@../../icons/save.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -52,7 +52,7 @@
                <graphic>
                   <ImageView fitHeight="32.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../icons/search.png" />
+                        <Image url="@../../icons/search.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -65,7 +65,7 @@
                <graphic>
                   <ImageView fitHeight="32.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../icons/delete.png" />
+                        <Image url="@../../icons/delete.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -102,7 +102,7 @@
                      <graphic>
                         <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../icons/clear.png" />
+                              <Image url="@../../icons/clear.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -117,22 +117,7 @@
                      <graphic>
                         <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../icons/clear.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-               </children>
-            </HBox>
-            <Region prefHeight="200.0" prefWidth="200.0" />
-            <HBox prefHeight="100.0" prefWidth="200.0">
-               <children>
-                  <TextField prefHeight="23.0" prefWidth="595.0" stylesheets="@../styles/TelaReplicadorProcessoStyle.css" />
-                  <Button mnemonicParsing="false" styleClass="botao_clear">
-                     <graphic>
-                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../icons/clear.png" />
+                              <Image url="@../../icons/clear.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -147,7 +132,7 @@
                      <graphic>
                         <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../icons/clear.png" />
+                              <Image url="@../../icons/clear.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -162,7 +147,22 @@
                      <graphic>
                         <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../icons/clear.png" />
+                              <Image url="@../../icons/clear.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+            <Region prefHeight="200.0" prefWidth="200.0" />
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <TextField prefHeight="23.0" prefWidth="595.0" />
+                  <Button mnemonicParsing="false" styleClass="botao_clear">
+                     <graphic>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/clear.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -179,7 +179,7 @@
                      <graphic>
                         <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../icons/clear.png" />
+                              <Image url="@../../icons/clear.png" />
                            </image>
                         </ImageView>
                      </graphic>

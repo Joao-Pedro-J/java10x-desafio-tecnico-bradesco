@@ -12,58 +12,58 @@
 <?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane maxHeight="420.0" maxWidth="720.0" minHeight="420.0" minWidth="720.0" prefHeight="420.0" prefWidth="720.0" stylesheets="@../styles/TelaReplicadorProcessoStyle.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="420.0" maxWidth="720.0" minHeight="420.0" minWidth="720.0" prefHeight="420.0" prefWidth="720.0" stylesheets="@../../styles/TelaReplicadorGlobalStyle.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jpdev.desafio_bradesco.controller.tela_replicador.ReplicadorProcessoController">
    <children>
       <HBox layoutY="10.0" maxHeight="40.0" maxWidth="720.0" minHeight="40.0" minWidth="720.0" prefHeight="40.0" prefWidth="720.0">
          <children>
             <Region prefHeight="40.0" prefWidth="20.0" />
-            <Button id="botao_add" focusTraversable="false" graphicTextGap="10.0" maxHeight="40.0" maxWidth="165.0" minHeight="40.0" minWidth="165.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="165.0" styleClass="botao_de_acao" text="ADICIONAR">
+            <Button id="botao_add" fx:id="botao_adicionar" focusTraversable="false" graphicTextGap="10.0" maxHeight="40.0" maxWidth="165.0" minHeight="40.0" minWidth="165.0" mnemonicParsing="false" onAction="#aoClicarBotaoAdicionar" prefHeight="40.0" prefWidth="165.0" styleClass="botao_de_acao" text="ADICIONAR">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
                <graphic>
                   <ImageView fitHeight="32.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../icons/add.png" />
+                        <Image url="@../../icons/add.png" />
                      </image>
                   </ImageView>
                </graphic>
             </Button>
             <Region prefHeight="40.0" prefWidth="20.0" />
-            <Button id="botao_save" focusTraversable="false" graphicTextGap="10.0" maxHeight="40.0" maxWidth="165.0" minHeight="40.0" minWidth="165.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="165.0" styleClass="botao_de_acao" text="SALVAR">
+            <Button id="botao_save" fx:id="botao_salvar" focusTraversable="false" graphicTextGap="10.0" maxHeight="40.0" maxWidth="165.0" minHeight="40.0" minWidth="165.0" mnemonicParsing="false" onAction="#aoClicarBotaoSalvar" prefHeight="40.0" prefWidth="165.0" styleClass="botao_de_acao" text="SALVAR">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
                <graphic>
                   <ImageView fitHeight="32.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../icons/save.png" />
+                        <Image url="@../../icons/save.png" />
                      </image>
                   </ImageView>
                </graphic>
             </Button>
             <Region prefHeight="40.0" prefWidth="20.0" />
-            <Button id="botao_search" focusTraversable="false" graphicTextGap="10.0" maxHeight="40.0" maxWidth="165.0" minHeight="40.0" minWidth="165.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="165.0" styleClass="botao_de_acao" text="BUSCAR">
+            <Button id="botao_search" fx:id="botao_buscar" focusTraversable="false" graphicTextGap="10.0" maxHeight="40.0" maxWidth="165.0" minHeight="40.0" minWidth="165.0" mnemonicParsing="false" onAction="#aoClicarBotaoBuscar" prefHeight="40.0" prefWidth="165.0" styleClass="botao_de_acao" text="BUSCAR">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
                <graphic>
                   <ImageView fitHeight="32.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../icons/search.png" />
+                        <Image url="@../../icons/search.png" />
                      </image>
                   </ImageView>
                </graphic>
             </Button>
             <Region prefHeight="40.0" prefWidth="20.0" />
-            <Button id="botao_delete" focusTraversable="false" graphicTextGap="10.0" maxHeight="40.0" maxWidth="165.0" minHeight="40.0" minWidth="165.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="165.0" styleClass="botao_de_acao" text="EXCLUIR">
+            <Button id="botao_delete" fx:id="botao_excluir" focusTraversable="false" graphicTextGap="10.0" maxHeight="40.0" maxWidth="165.0" minHeight="40.0" minWidth="165.0" mnemonicParsing="false" onAction="#aoClicarBotaoExcluir" prefHeight="40.0" prefWidth="165.0" styleClass="botao_de_acao" text="EXCLUIR">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
                <graphic>
                   <ImageView fitHeight="32.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../icons/delete.png" />
+                        <Image url="@../../icons/delete.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -89,12 +89,18 @@
             <Region prefHeight="200.0" prefWidth="200.0" />
             <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <TextField prefHeight="23.0" prefWidth="500.0" />
-                  <Button mnemonicParsing="false" styleClass="botao_clear">
+                  <TextField fx:id="txf_id" prefHeight="23.0" prefWidth="531.0" />
+               </children>
+            </HBox>
+            <Region prefHeight="200.0" prefWidth="200.0" />
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="txf_processo" prefHeight="23.0" prefWidth="500.0" />
+                  <Button fx:id="botao_limpar_processo" mnemonicParsing="false" onAction="#aoClicarBotaoLimpar" styleClass="botao_clear">
                      <graphic>
                         <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../icons/clear.png" />
+                              <Image url="@../../icons/clear.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -104,12 +110,12 @@
             <Region prefHeight="200.0" prefWidth="200.0" />
             <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <TextField prefHeight="23.0" prefWidth="500.0" stylesheets="@../styles/TelaReplicadorProcessoStyle.css" />
-                  <Button mnemonicParsing="false" styleClass="botao_clear">
+                  <TextField fx:id="txf_descricao" prefHeight="23.0" prefWidth="500.0" />
+                  <Button fx:id="botao_limpar_descricao" mnemonicParsing="false" onAction="#aoClicarBotaoLimpar" styleClass="botao_clear">
                      <graphic>
                         <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../icons/clear.png" />
+                              <Image url="@../../icons/clear.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -117,22 +123,7 @@
                </children>
             </HBox>
             <Region prefHeight="200.0" prefWidth="200.0" />
-            <HBox prefHeight="100.0" prefWidth="200.0">
-               <children>
-                  <TextField prefHeight="23.0" prefWidth="500.0" stylesheets="@../styles/TelaReplicadorProcessoStyle.css" />
-                  <Button mnemonicParsing="false" styleClass="botao_clear">
-                     <graphic>
-                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../icons/clear.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-               </children>
-            </HBox>
-            <Region prefHeight="200.0" prefWidth="200.0" />
-            <CheckBox mnemonicParsing="false" />
+            <CheckBox fx:id="chbx_habilitado" mnemonicParsing="false" />
             <Region prefHeight="200.0" prefWidth="200.0" />
          </children>
       </VBox>
