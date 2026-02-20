@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane maxHeight="350.0" maxWidth="500.0" minHeight="350.0" minWidth="500.0" prefHeight="350.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jpdev.desafio_bradesco.controller.dialogo_buscar.DialogoBuscarReplicadorProcessoController">
+   <children>
+      <TableView fx:id="tabelaProcessos" prefHeight="312.0" prefWidth="500.0">
+        <columns>
+          <TableColumn fx:id="colunaId" maxWidth="75.0" minWidth="75.0" prefWidth="75.0" resizable="false" text="ID" />
+          <TableColumn fx:id="colunaProcesso" maxWidth="135.0" minWidth="135.0" prefWidth="135.0" resizable="false" text="PROCESSO" />
+            <TableColumn fx:id="colunaDescricao" maxWidth="204.0" minWidth="204.0" prefWidth="204.0" resizable="false" text="DESCRIÇÃO" />
+            <TableColumn fx:id="colunaHabilitado" maxWidth="85.0" minWidth="85.0" prefWidth="85.0" resizable="false" text="HABILITADO" />
+        </columns>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TableView>
+      <HBox alignment="CENTER_RIGHT" layoutY="312.0" prefHeight="30.0" prefWidth="500.0">
+         <children>
+            <Button fx:id="botaoSelecionar" mnemonicParsing="false" onAction="#aoClicarBotaoSelecionar" text="Selecionar">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="botaoCancelar" mnemonicParsing="false" onAction="#aoClicarBotaoCancelar" text="Cancelar">
+               <HBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </HBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
