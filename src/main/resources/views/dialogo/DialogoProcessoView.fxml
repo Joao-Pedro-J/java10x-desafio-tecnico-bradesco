@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 
-<AnchorPane maxHeight="350.0" maxWidth="500.0" minHeight="350.0" minWidth="500.0" prefHeight="350.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jpdev.desafio_bradesco.controller.dialogo_buscar.DialogoBuscarReplicadorProcessoController">
+<AnchorPane maxHeight="350.0" maxWidth="500.0" minHeight="350.0" minWidth="500.0" prefHeight="350.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jpdev.desafio_bradesco.controller.dialogo.DialogoProcessoController">
    <children>
       <TableView fx:id="tabelaProcessos" prefHeight="312.0" prefWidth="500.0">
         <columns>

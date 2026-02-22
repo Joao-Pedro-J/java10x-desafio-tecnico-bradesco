@@ -1,8 +1,8 @@
-package com.jpdev.desafio_bradesco.controller.dialogo_buscar;
+package com.jpdev.desafio_bradesco.controller.dialogo;
 
-import com.jpdev.desafio_bradesco.controller.tela_replicador.ReplicadorProcessoController;
+import com.jpdev.desafio_bradesco.controller.tela.ProcessoController;
 import com.jpdev.desafio_bradesco.database.DbConnection;
-import com.jpdev.desafio_bradesco.database.dao.ReplicadorProcessoDAO;
+import com.jpdev.desafio_bradesco.database.dao.ProcessoDAO;
 import com.jpdev.desafio_bradesco.database.model.TB_REPLICACAO_PROCESSO;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -18,8 +18,8 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.List;
 
-public class DialogoBuscarReplicadorProcessoController {
-    private ReplicadorProcessoController mainController;
+public class DialogoProcessoController {
+    private ProcessoController mainController;
 
     @FXML private TableView<TB_REPLICACAO_PROCESSO> tabelaProcessos;
     @FXML private TableColumn<TB_REPLICACAO_PROCESSO, Long> colunaId;
@@ -58,7 +58,7 @@ public class DialogoBuscarReplicadorProcessoController {
     private void recuperarProcessos() {
         try {
             Connection conn = DbConnection.getConnection();
-            ReplicadorProcessoDAO dao = new ReplicadorProcessoDAO(conn);
+            ProcessoDAO dao = new ProcessoDAO(conn);
 
             List<TB_REPLICACAO_PROCESSO> processos = dao.selectAll();
 
@@ -76,7 +76,7 @@ public class DialogoBuscarReplicadorProcessoController {
         }
     }
 
-    public void setMainController(ReplicadorProcessoController mainController) {
+    public void setMainController(ProcessoController mainController) {
         this.mainController = mainController;
     }
 }

@@ -1,8 +1,8 @@
-package com.jpdev.desafio_bradesco.controller.tela_replicador;
+package com.jpdev.desafio_bradesco.controller.tela;
 
-import com.jpdev.desafio_bradesco.controller.dialogo_buscar.DialogoBuscarReplicadorProcessoController;
+import com.jpdev.desafio_bradesco.controller.dialogo.DialogoProcessoController;
 import com.jpdev.desafio_bradesco.database.DbConnection;
-import com.jpdev.desafio_bradesco.database.dao.ReplicadorProcessoDAO;
+import com.jpdev.desafio_bradesco.database.dao.ProcessoDAO;
 import com.jpdev.desafio_bradesco.database.model.TB_REPLICACAO_PROCESSO;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -17,10 +17,10 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
 
-public class ReplicadorProcessoController {
+public class ProcessoController {
 
     private Connection conn;
-    private ReplicadorProcessoDAO dao;
+    private ProcessoDAO dao;
 
     private enum TIPO_ACAO {NENHUMA, INSERT, UPDATE}
     private TIPO_ACAO tipoAcaoAtual = TIPO_ACAO.NENHUMA;
@@ -41,7 +41,7 @@ public class ReplicadorProcessoController {
     @FXML public void initialize() {
         try {
             conn = DbConnection.getConnection();
-            dao = new ReplicadorProcessoDAO(conn);
+            dao = new ProcessoDAO(conn);
 
             txf_id.setDisable(true);
             txf_processo.setDisable(true);
@@ -203,10 +203,10 @@ public class ReplicadorProcessoController {
 
     @FXML private void criarJanelaDialogoBuscar() {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/dialogo-buscar/DialogoBuscarReplicadorProcessoView.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/dialogo/DialogoProcessoView.fxml"));
             Parent root = loader.load();
 
-            DialogoBuscarReplicadorProcessoController dialogoController = loader.getController();
+            DialogoProcessoController dialogoController = loader.getController();
             dialogoController.setMainController(this);
 
             Stage stage = new Stage();

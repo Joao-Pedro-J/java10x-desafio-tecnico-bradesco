@@ -5,16 +5,17 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class TelaReplicadorProcessoTabela extends Application {
+public class TelaDirecao extends Application {
     @Override
     public void start(Stage stage) throws Exception {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/tela-replicador/TelaReplicadorProcessoTabelaView.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/tela/TelaDirecaoView.fxml"));
 
         Scene scene = new Scene(loader.load());
-        stage.setTitle("Replicação - Processo e Tabela");
+        stage.setTitle("Replicação - Direção");
         stage.setResizable(false);
         stage.setScene(scene);
         stage.show();
+
     }
 
     public static void main(String[] args) {

@@ -8,7 +8,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-public class ReplicadorDirecaoDAO implements ReplicadorDAO<TB_REPLICACAO_DIRECAO> {
+public class DirecaoDAO implements ReplicadorDAO<TB_REPLICACAO_DIRECAO> {
 
     private final Connection conn;
 
@@ -33,7 +33,7 @@ public class ReplicadorDirecaoDAO implements ReplicadorDAO<TB_REPLICACAO_DIRECAO
     private final PreparedStatement pstUpdate;
     private final PreparedStatement pstDelete;
 
-    public ReplicadorDirecaoDAO(Connection conn) throws SQLException {
+    public DirecaoDAO(Connection conn) throws SQLException {
         this.conn = conn;
         pstSelectAll = conn.prepareStatement(SQL_SELECT_ALL);
         pstSelectById = conn.prepareStatement(SQL_SELECT_BT_ID);

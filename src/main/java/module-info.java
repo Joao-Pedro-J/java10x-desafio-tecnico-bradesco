@@ -8,7 +8,7 @@ module com.jpdev.desafio_bradesco {
     opens com.jpdev.desafio_bradesco.database.model to javafx.base, javafx.fxml;
 
     exports com.jpdev.desafio_bradesco;
-    opens com.jpdev.desafio_bradesco.controller.dialogo_buscar to javafx.fxml;
-    opens com.jpdev.desafio_bradesco.controller.tela_replicador to javafx.fxml;
+    opens com.jpdev.desafio_bradesco.controller.dialogo to javafx.fxml;
+    opens com.jpdev.desafio_bradesco.controller.tela to javafx.fxml;
 }
 

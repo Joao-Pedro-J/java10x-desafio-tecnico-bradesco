@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane maxHeight="520.0" maxWidth="820.0" minHeight="520.0" minWidth="820.0" prefHeight="520.0" prefWidth="820.0" stylesheets="@../../styles/TelaReplicadorGlobalStyle.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="520.0" maxWidth="820.0" minHeight="520.0" minWidth="820.0" prefHeight="520.0" prefWidth="820.0" stylesheets="@../../styles/TelaGlobalStyle.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <HBox layoutY="10.0" maxHeight="40.0" maxWidth="820.0" minHeight="40.0" minWidth="820.0" prefHeight="40.0" prefWidth="820.0">
          <children>

@@ -5,15 +5,14 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
-import javafx.scene.control.ButtonType;
 import javafx.stage.Stage;
 
 import java.sql.SQLException;
 
-public class TelaReplicadorProcesso extends Application {
+public class TelaProcesso extends Application {
     @Override
     public void start(Stage stage) throws Exception {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/tela-replicador/TelaReplicadorProcessoView.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/tela/TelaProcessoView.fxml"));
 
         try {
             DbConnection.getConnection();
